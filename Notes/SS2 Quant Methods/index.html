@@ -1,0 +1,910 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../SS14%20Fixed-Income/">
+      
+      
+        <link rel="next" href="../SS3%20Quant%20Analysis%20Summary/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>SS2 Quant Methods - obsidian-mkdocs template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reading-6-the-time-value-of-money" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="obsidian-mkdocs template" class="md-header__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SS2 Quant Methods
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="obsidian-mkdocs template" class="md-nav__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    obsidian-mkdocs template
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Mock
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mock
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mock/Mock/" class="md-nav__link">
+        Mock
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI%26Derivatives/" class="md-nav__link">
+        AI&Derivatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Book3SS6-8%20Notes%E9%94%99%E9%A2%98/" class="md-nav__link">
+        Book3SS6 8 Notes错题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reading47-Fundamentals%20of%20Credit%20Analysis/" class="md-nav__link">
+        Reading47 Fundamentals of Credit Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SS10R30-Corporate%20Governance%20%26%20ESG/" class="md-nav__link">
+        SS10R30 Corporate Governance & ESG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SS11-12%20Equity/" class="md-nav__link">
+        SS11 12 Equity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SS13%20Fixed-Income/" class="md-nav__link">
+        SS13 Fixed Income
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SS14%20Fixed-Income/" class="md-nav__link">
+        SS14 Fixed Income
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SS2 Quant Methods
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SS2 Quant Methods
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-interpret-interest-rates-as-required-rates-of-return-discount-rates-or-opportunity-costs" class="md-nav__link">
+    a interpret interest rates as required rates of return, discount rates, or opportunity costs;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-explain-an-interest-rate-as-the-sum-of-a-real-risk-free-rate-and-premiums-that-compensate-investors-for-bearing-distinct-types-of-risk" class="md-nav__link">
+    b explain an interest rate as the sum of a real risk-­free rate and premiums that compensate investors for bearing distinct types of risk;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-calculate-and-interpret-the-effective-annual-rate-given-the-stated-annual-interest-rate-and-the-frequency-of-compounding" class="md-nav__link">
+    c calculate and interpret the effective annual rate, given the stated annual interest rate and the frequency of compounding;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-solve-time-value-of-money-problems-for-different-frequencies-of-compounding" class="md-nav__link">
+    d solve time value of money problems for different frequencies of compounding;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-calculate-and-interpret-the-future-value-fv-and-present-value-pv-of-a-single-sum-of-money-an-ordinary-annuity-an-annuity-due-a-perpetuity-pv-only-and-a-series-of-unequal-cash-flows" class="md-nav__link">
+    e calculate and interpret the future value (FV) and present value (PV) of a single sum of money, an ordinary annuity, an annuity due, a perpetuity (PV only), and a series of unequal cash flows;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f-demonstrate-the-use-of-a-time-line-in-modeling-and-solving-time-value-of-money-problems" class="md-nav__link">
+    f demonstrate the use of a time line in modeling and solving time value of money problems.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SS3%20Quant%20Analysis%20Summary/" class="md-nav__link">
+        SS3 Quant Analysis Summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SS6%20Financial%20Report%20and%20Analysis/" class="md-nav__link">
+        SS6 Financial Report and Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SS7%20Financial%20Report%20and%20Analysis/" class="md-nav__link">
+        SS7 Financial Report and Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SS8%20Financial%20Report%20and%20Analysis/" class="md-nav__link">
+        SS8 Financial Report and Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SS9%20Financial%20Report%20and%20Analysis/" class="md-nav__link">
+        SS9 Financial Report and Analysis
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-interpret-interest-rates-as-required-rates-of-return-discount-rates-or-opportunity-costs" class="md-nav__link">
+    a interpret interest rates as required rates of return, discount rates, or opportunity costs;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-explain-an-interest-rate-as-the-sum-of-a-real-risk-free-rate-and-premiums-that-compensate-investors-for-bearing-distinct-types-of-risk" class="md-nav__link">
+    b explain an interest rate as the sum of a real risk-­free rate and premiums that compensate investors for bearing distinct types of risk;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-calculate-and-interpret-the-effective-annual-rate-given-the-stated-annual-interest-rate-and-the-frequency-of-compounding" class="md-nav__link">
+    c calculate and interpret the effective annual rate, given the stated annual interest rate and the frequency of compounding;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-solve-time-value-of-money-problems-for-different-frequencies-of-compounding" class="md-nav__link">
+    d solve time value of money problems for different frequencies of compounding;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-calculate-and-interpret-the-future-value-fv-and-present-value-pv-of-a-single-sum-of-money-an-ordinary-annuity-an-annuity-due-a-perpetuity-pv-only-and-a-series-of-unequal-cash-flows" class="md-nav__link">
+    e calculate and interpret the future value (FV) and present value (PV) of a single sum of money, an ordinary annuity, an annuity due, a perpetuity (PV only), and a series of unequal cash flows;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f-demonstrate-the-use-of-a-time-line-in-modeling-and-solving-time-value-of-money-problems" class="md-nav__link">
+    f demonstrate the use of a time line in modeling and solving time value of money problems.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>SS2 Quant Methods</p>
+<p>Friday, June 25, 2021</p>
+<p>12:42 PM</p>
+<h1 id="reading-6-the-time-value-of-money">READING 6. THE TIME VALUE OF MONEY<a class="headerlink" href="#reading-6-the-time-value-of-money" title="Permanent link">&para;</a></h1>
+<h5 id="a-interpret-interest-rates-as-required-rates-of-return-discount-rates-or-opportunity-costs">a interpret interest rates as required rates of return, discount rates, or opportunity costs;<a class="headerlink" href="#a-interpret-interest-rates-as-required-rates-of-return-discount-rates-or-opportunity-costs" title="Permanent link">&para;</a></h5>
+<ul>
+<li><img alt="" src="media/image1.png" />{width="7.229166666666667in"
+    height="0.4791666666666667in"}</li>
+</ul>
+<h5 id="b-explain-an-interest-rate-as-the-sum-of-a-real-risk-free-rate-and-premiums-that-compensate-investors-for-bearing-distinct-types-of-risk">b explain an interest rate as the sum of a real risk-­free rate and premiums that compensate investors for bearing distinct types of risk;<a class="headerlink" href="#b-explain-an-interest-rate-as-the-sum-of-a-real-risk-free-rate-and-premiums-that-compensate-investors-for-bearing-distinct-types-of-risk" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Interest rate = real risk-free rate + maturity premium (time) +
+    default risk premium () + liquidity premium(convert to cash\$) +
+    inflation risk premium [nominal risk-free rate]</li>
+</ul>
+<h5 id="c-calculate-and-interpret-the-effective-annual-rate-given-the-stated-annual-interest-rate-and-the-frequency-of-compounding">c calculate and interpret the effective annual rate, given the stated annual interest rate and the frequency of compounding;<a class="headerlink" href="#c-calculate-and-interpret-the-effective-annual-rate-given-the-stated-annual-interest-rate-and-the-frequency-of-compounding" title="Permanent link">&para;</a></h5>
+<ul>
+<li><img alt="" src="media/image2.png" />{width="5.0625in"
+    height="0.2604166666666667in"}</li>
+</ul>
+<h5 id="d-solve-time-value-of-money-problems-for-different-frequencies-of-compounding">d solve time value of money problems for different frequencies of compounding;<a class="headerlink" href="#d-solve-time-value-of-money-problems-for-different-frequencies-of-compounding" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Effective annual rate (EAR) = (1 + Periodic interest rate)<em>^m^</em> -- 1</li>
+</ul>
+<p><img alt="" src="media/image3.png" />{width="7.291666666666667in"
+height="0.19791666666666666in"}</p>
+<h5 id="e-calculate-and-interpret-the-future-value-fv-and-present-value-pv-of-a-single-sum-of-money-an-ordinary-annuity-an-annuity-due-a-perpetuity-pv-only-and-a-series-of-unequal-cash-flows">e calculate and interpret the future value (FV) and present value (PV) of a single sum of money, an ordinary annuity, an annuity due, a perpetuity (PV only), and a series of unequal cash flows;<a class="headerlink" href="#e-calculate-and-interpret-the-future-value-fv-and-present-value-pv-of-a-single-sum-of-money-an-ordinary-annuity-an-annuity-due-a-perpetuity-pv-only-and-a-series-of-unequal-cash-flows" title="Permanent link">&para;</a></h5>
+<h5 id="f-demonstrate-the-use-of-a-time-line-in-modeling-and-solving-time-value-of-money-problems">f demonstrate the use of a time line in modeling and solving time value of money problems.<a class="headerlink" href="#f-demonstrate-the-use-of-a-time-line-in-modeling-and-solving-time-value-of-money-problems" title="Permanent link">&para;</a></h5>
+<p>An <strong>annuity</strong>: a finite set of level sequential cash flows. A
+<strong>perpetuity</strong> is a perpetual annuity, or a set of level never-ending
+sequential cash flows-first cash now.</p>
+<ul>
+<li>
+<p>An <strong>ordinary annuity</strong> has a first cash flow that occurs one period
+    from now (indexed at t = 1).</p>
+</li>
+<li>
+<p>An <strong>annuity due</strong> has a first cash flow that occurs immediately
+    (indexed at t = 0).</p>
+</li>
+</ul>
+<p>calculation for an annuity (A) due: PV=A1−1(1+r)Nr(1+r),</p>
+<h1 id="reading-7-statistical-concepts-and-market-returns">READING 7. STATISTICAL CONCEPTS AND MARKET RETURNS<a class="headerlink" href="#reading-7-statistical-concepts-and-market-returns" title="Permanent link">&para;</a></h1>
+<h5 id="a-distinguish-between-descriptive-statistics-and-inferential-statistics-between-a-population-and-a-sample-and-among-the-types-of-measurement-scales">a distinguish between descriptive statistics and inferential statistics, between a population and a sample, and among the types of measurement scales;<a class="headerlink" href="#a-distinguish-between-descriptive-statistics-and-inferential-statistics-between-a-population-and-a-sample-and-among-the-types-of-measurement-scales" title="Permanent link">&para;</a></h5>
+<h5 id="b-define-a-parameter-a-sample-statistic-and-a-frequency-distribution">b define a parameter, a sample statistic, and a frequency distribution;<a class="headerlink" href="#b-define-a-parameter-a-sample-statistic-and-a-frequency-distribution" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><strong>Descriptive statistics</strong>: study of summarized data effectively to
+    describe the import aspects. <strong>Inferential statistics</strong>: forecasts,
+    estimates, or judgements about a larger group from an observed
+    smaller group. <strong>Sample [statistics]{.ul}</strong>: a computed quantity to
+    describe a sample(para</p>
+</li>
+<li>
+<p><strong>Population</strong>: all members of a specified group; <strong>Sample</strong>: subset
+    of pop;</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Parameter</strong>: descriptive measure of a population characteristic, eg
+mean, range, variance</p>
+</blockquote>
+<ul>
+<li><strong>Measurement scales</strong>: nominal (categorical data), ordinal (ranking
+    categorical), interval (differ in ranking is equal), ratio
+    (strongest, true zero point as origin).</li>
+</ul>
+<h5 id="width7604166666666667in-height04895833333333333in"><img alt="" src="media/image4.png" />{width="7.604166666666667in" height="0.4895833333333333in"}<a class="headerlink" href="#width7604166666666667in-height04895833333333333in" title="Permanent link">&para;</a></h5>
+<ul>
+<li><img alt="" src="media/image5.png" />{width="7.28125in" height="0.46875in"}</li>
+</ul>
+<h5 id="d-describe-the-properties-of-a-data-set-presented-as-a-histogram-or-a-frequency-polygon">d describe the properties of a data set presented as a histogram or a frequency polygon;<a class="headerlink" href="#d-describe-the-properties-of-a-data-set-presented-as-a-histogram-or-a-frequency-polygon" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Cumulative frequency distribution: [Height]{.ul} of each bar
+    represents the [absolute frequency]{.ul} for each return interval.
+    <strong>Frequency polygon</strong>: A graph of a frequency distribution obtained
+    by drawing straight lines joining successive points representing the
+    class frequencies.</li>
+</ul>
+<h5 id="e-calculate-and-interpret-measures-of-central-tendency-including-the-population-mean-sample-mean-arithmetic-meanmeasure-of-a-typical-outcome-of-assets-weighted-average-or-mean-geometric-mean-harmonic-mean-median-and-mode-cross-sectional-data-time-series-data">e calculate and interpret measures of central tendency, including the population mean, sample mean, arithmetic mean(measure of a typical outcome of assets), weighted average or mean, geometric mean, harmonic mean, median, and mode; cross-sectional data, time-series data<a class="headerlink" href="#e-calculate-and-interpret-measures-of-central-tendency-including-the-population-mean-sample-mean-arithmetic-meanmeasure-of-a-typical-outcome-of-assets-weighted-average-or-mean-geometric-mean-harmonic-mean-median-and-mode-cross-sectional-data-time-series-data" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Measure of location include central tendency and other measures of
+    location/distribution. <strong>Modal intervals</strong>: most frequently
+    occurring interval of grouped data.</li>
+</ul>
+<p><img alt="Center of Gravity Analogy for the Arithmetic Mean 10 Fulcrum When the
+fulcrum is placed at 8, the bar is perfectly balanced. 11 12
+" src="media/image6.png" />{width="4.677083333333333in" height="1.8125in"}</p>
+<ul>
+<li><img alt="" src="media/image7.png" />{width="7.25in" height="0.7708333333333334in"}</li>
+</ul>
+<h5 id="f-calculate-and-interpret-quantiles-of-quartiles14-quintiles15-deciles110-percentiles">f calculate and interpret quantiles of [quartiles(1/4), quintiles(1/5), deciles(1/10), percentiles];<a class="headerlink" href="#f-calculate-and-interpret-quantiles-of-quartiles14-quintiles15-deciles110-percentiles" title="Permanent link">&para;</a></h5>
+<h5 id="g-calculate-and-interpret-1-a-range-and-a-mean-absolute-deviation-and-2-the-variance-and-standard-deviation-of-a-population-and-of-a-sample">g calculate and interpret 1) a range and a mean absolute deviation and 2) the variance and standard deviation of a population and of a sample;<a class="headerlink" href="#g-calculate-and-interpret-1-a-range-and-a-mean-absolute-deviation-and-2-the-variance-and-standard-deviation-of-a-population-and-of-a-sample" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>Mean absolute deviation always ≤ standard deviation; arithmetic sum
+    of the deviations around the mean always=0!</p>
+</li>
+<li>
+<p>Downside risk dispersion: semivariance(average squared deviation
+    below mean), semistandard deviation(positive square root of
+    semivariance), target semi(below target).</p>
+</li>
+</ul>
+<h5 id="h-calculate-and-interpret-the-proportion-of-observations-falling-within-a-specified-number-of-standard-deviations-of-the-mean-using-chebyshevs-inequality">h calculate and interpret the proportion of observations falling within a specified number of standard deviations of the mean using Chebyshev's inequality:<a class="headerlink" href="#h-calculate-and-interpret-the-proportion-of-observations-falling-within-a-specified-number-of-standard-deviations-of-the-mean-using-chebyshevs-inequality" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="media/image8.png" />{width="7.645833333333333in" height="0.46875in"}</p>
+<h5 id="i-calculate-and-interpret-the-coefficient-of-variation">i calculate and interpret the coefficient of variation;<a class="headerlink" href="#i-calculate-and-interpret-the-coefficient-of-variation" title="Permanent link">&para;</a></h5>
+<ul>
+<li><img alt="" src="media/image9.png" />{width="4.677083333333333in"
+    height="0.2604166666666667in"}</li>
+</ul>
+<h5 id="j-explain-skewness-and-the-meaning-of-a-positively-or-negatively-skewed-return-distribution">j explain skewness and the meaning of a positively or negatively skewed return distribution;<a class="headerlink" href="#j-explain-skewness-and-the-meaning-of-a-positively-or-negatively-skewed-return-distribution" title="Permanent link">&para;</a></h5>
+<h5 id="k-describe-relative-locations-of-mean-median-mode-for-unimodal-nonsymmetrical-distribution">k describe relative locations of mean, median, mode for unimodal, nonsymmetrical distribution;<a class="headerlink" href="#k-describe-relative-locations-of-mean-median-mode-for-unimodal-nonsymmetrical-distribution" title="Permanent link">&para;</a></h5>
+<h5 id="l-explain-measures-of-sample-skewness-and-kurtosis">l explain measures of sample skewness and kurtosis;<a class="headerlink" href="#l-explain-measures-of-sample-skewness-and-kurtosis" title="Permanent link">&para;</a></h5>
+<p><img alt="Distribution Skewed to the Right (Positively Skewed) Distribution
+Skewed to the Left (Negatively Skewed)
+" src="media/image10.png" />{width="4.947916666666667in"
+height="1.3333333333333333in"}</p>
+<ul>
+<li>
+<p><img alt="" src="media/image11.png" />{width="7.3125in"
+    height="0.6979166666666666in"}</p>
+</li>
+<li>
+<p><img alt="" src="media/image12.png" />{width="7.333333333333333in"
+    height="0.9166666666666666in"}</p>
+</li>
+</ul>
+<h5 id="m-compare-the-use-of-arithmetic-and-geometric-means-when-analyzing-investment-returns">m compare the use of arithmetic and geometric means when analyzing investment returns.<a class="headerlink" href="#m-compare-the-use-of-arithmetic-and-geometric-means-when-analyzing-investment-returns" title="Permanent link">&para;</a></h5>
+<h1 id="reading-8-probability-concepts">READING 8. PROBABILITY CONCEPTS<a class="headerlink" href="#reading-8-probability-concepts" title="Permanent link">&para;</a></h1>
+<h5 id="a-define-a-random-variable-an-outcome-an-event-mutually-exclusive-events-exhaustive-events">a define a random variable, an outcome, an event, mutually exclusive events, exhaustive events;<a class="headerlink" href="#a-define-a-random-variable-an-outcome-an-event-mutually-exclusive-events-exhaustive-events" title="Permanent link">&para;</a></h5>
+<h5 id="b-state-the-two-defining-properties-of-probability-and-distinguish-among-empiricala-relative-frequency-of-occurrence-subjective-and-priorilogical-analysis-rather-observation-judgment">b state the two defining properties of probability and distinguish among empirical(a relative frequency of occurrence), subjective, and priori(logical analysis rather observation judgment);<a class="headerlink" href="#b-state-the-two-defining-properties-of-probability-and-distinguish-among-empiricala-relative-frequency-of-occurrence-subjective-and-priorilogical-analysis-rather-observation-judgment" title="Permanent link">&para;</a></h5>
+<h5 id="c-state-the-probability-of-an-event-in-terms-of-odds-for-and-against-the-event">c state the probability of an event in terms of odds for and against the event;<a class="headerlink" href="#c-state-the-probability-of-an-event-in-terms-of-odds-for-and-against-the-event" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Exhaustive: Covering or containing all possible outcomes. Pairs
+    arbitrage trade: defined by Dutch Book Theorem, inconsistent
+    probabilities create profit opportunities.</li>
+</ul>
+<p><img alt="" src="media/image13.png" />{width="6.614583333333333in" height="0.3125in"}</p>
+<h5 id="d-distinguish-between-unconditionalmarginal-and-conditional-probabilities">d distinguish between unconditional(marginal) and conditional probabilities;<a class="headerlink" href="#d-distinguish-between-unconditionalmarginal-and-conditional-probabilities" title="Permanent link">&para;</a></h5>
+<h5 id="e-explain-the-multiplication-addition-and-total-probability-rules">e explain the multiplication, addition, and total probability rules;<a class="headerlink" href="#e-explain-the-multiplication-addition-and-total-probability-rules" title="Permanent link">&para;</a></h5>
+<h5 id="f-calculate-and-interpret-1-the-joint-probability-of-two-events-2-the-probability-that-at-least-one-of-two-events-will-occur-given-the-probability-of-each-and-the-joint-probability-of-the-two-events-and-3-a-joint-probability-of-any-number-of-independent-events">f calculate and interpret 1) the joint probability of two events, 2) the probability that at least one of two events will occur, given the probability of each and the joint probability of the two events, and 3) a joint probability of any number of independent events;<a class="headerlink" href="#f-calculate-and-interpret-1-the-joint-probability-of-two-events-2-the-probability-that-at-least-one-of-two-events-will-occur-given-the-probability-of-each-and-the-joint-probability-of-the-two-events-and-3-a-joint-probability-of-any-number-of-independent-events" title="Permanent link">&para;</a></h5>
+<h5 id="g-distinguish-between-dependent-and-independent-events">g distinguish between dependent and independent events;<a class="headerlink" href="#g-distinguish-between-dependent-and-independent-events" title="Permanent link">&para;</a></h5>
+<h5 id="h-calculate-and-interpret-an-unconditional-probability-using-the-total-probability-rule">h calculate and interpret an unconditional probability using the total probability rule;<a class="headerlink" href="#h-calculate-and-interpret-an-unconditional-probability-using-the-total-probability-rule" title="Permanent link">&para;</a></h5>
+<h5 id="i-explain-the-use-of-conditional-expectation-in-investment-applications">i explain the use of conditional expectation in investment applications;<a class="headerlink" href="#i-explain-the-use-of-conditional-expectation-in-investment-applications" title="Permanent link">&para;</a></h5>
+<h5 id="j-explain-the-use-of-a-treemutually-exclusive-but-dependent-conditional-diagram-represent-an-investment-problem">j explain the use of a tree(mutually exclusive but dependent, conditional) diagram represent an investment problem;<a class="headerlink" href="#j-explain-the-use-of-a-treemutually-exclusive-but-dependent-conditional-diagram-represent-an-investment-problem" title="Permanent link">&para;</a></h5>
+<h5 id="k-calculate-and-interpret-covariance-and-correlation-and-interpret-a-scatterplot">k calculate and interpret covariance and correlation and interpret a scatterplot;<a class="headerlink" href="#k-calculate-and-interpret-covariance-and-correlation-and-interpret-a-scatterplot" title="Permanent link">&para;</a></h5>
+<h5 id="l-calculate-and-interpret-the-expected-value-variance-and-standard-deviation-of-a-random-variable-and-of-returns-on-a-portfolio">l calculate and interpret the expected value, variance, and standard deviation of a random variable and of returns on a portfolio;<a class="headerlink" href="#l-calculate-and-interpret-the-expected-value-variance-and-standard-deviation-of-a-random-variable-and-of-returns-on-a-portfolio" title="Permanent link">&para;</a></h5>
+<h5 id="m-calculate-and-interpret-covariance-given-a-joint-probability-function">m calculate and interpret covariance given a joint probability function;<a class="headerlink" href="#m-calculate-and-interpret-covariance-given-a-joint-probability-function" title="Permanent link">&para;</a></h5>
+<ul>
+<li>The covariance of returns is positive when the returns on both
+    assets tend to be on the same side (above or below) their expected
+    values at the same time</li>
+</ul>
+<h5 id="n-calculate-and-interpret-an-updated-probability-using-bayes-formula">n calculate and interpret an updated probability using Bayes' formula;<a class="headerlink" href="#n-calculate-and-interpret-an-updated-probability-using-bayes-formula" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="media/image14.png" />{width="7.604166666666667in"
+height="0.6770833333333334in"}</p>
+<h5 id="o-identify-the-most-appropriate-method-to-solve-a-particular-counting-problem-and-solve-counting-problems-using-factorial-combination-and-permutation-concepts">o identify the most appropriate method to solve a particular counting problem and solve counting problems using factorial, combination, and permutation concepts.<a class="headerlink" href="#o-identify-the-most-appropriate-method-to-solve-a-particular-counting-problem-and-solve-counting-problems-using-factorial-combination-and-permutation-concepts" title="Permanent link">&para;</a></h5>
+<p><img alt="、 0 淑 以 キ 争 0 又 ゝ も ス ニ 8 ・ て ニ j て \' 0 X ℃ --- 十 ラ
+、 0 キ 、 て ) 9 \' 0 ← ー は 疉 ( ル ( ル = 第 5 MX +
+" src="media/image15.jpeg" />{width="6.791666666666667in"
+height="8.989583333333334in"}</p>
+<p><img alt="00 \' 0 一 、 0 淑 以 キ 0 メ ゝ も ス ニ 8 ・ て ニ て \' 0 X \' 0 ′
+り ス 9 , 0 十 ラ 、 0 十 、 て ) 9 \' 0 ( 嵭 ( ル = 第
+" src="media/image16.jpeg" />{width="6.947916666666667in"
+height="9.020833333333334in"}</p>
+<h1 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h1 id="reading-9-common-probability-distributions">READING 9. COMMON PROBABILITY DISTRIBUTIONS<a class="headerlink" href="#reading-9-common-probability-distributions" title="Permanent link">&para;</a></h1>
+<h5 id="a-define-a-probability-distribution-and-distinguish-between-discrete-and-continuous-random-variables-and-their-probability-functions">a define a probability distribution and distinguish between discrete and continuous random variables and their probability functions;<a class="headerlink" href="#a-define-a-probability-distribution-and-distinguish-between-discrete-and-continuous-random-variables-and-their-probability-functions" title="Permanent link">&para;</a></h5>
+<h5 id="b-describe-the-set-of-possible-outcomes-of-a-specified-discrete-random-variable-c-interpret-a-cumulative-distribution-function-d-calculate-and-interpret-probabilities-for-a-random-variable-given-its-cumulative-distribution-function">b describe the set of possible outcomes of a specified discrete random variable; c interpret a cumulative distribution function; d calculate and interpret probabilities for a random variable, given its cumulative distribution function;<a class="headerlink" href="#b-describe-the-set-of-possible-outcomes-of-a-specified-discrete-random-variable-c-interpret-a-cumulative-distribution-function-d-calculate-and-interpret-probabilities-for-a-random-variable-given-its-cumulative-distribution-function" title="Permanent link">&para;</a></h5>
+<h5 id="e-define-a-discrete-uniform-random-variable-a-bernoulli-random-variable-and-a-binomial-random-variable">e define a discrete uniform random variable, a Bernoulli random variable, and a binomial random variable;<a class="headerlink" href="#e-define-a-discrete-uniform-random-variable-a-bernoulli-random-variable-and-a-binomial-random-variable" title="Permanent link">&para;</a></h5>
+<h5 id="f-calculate-and-interpret-probabilities-given-the-discrete-uniform-and-the-binomial-distribution-functions">f calculate and interpret probabilities given the discrete uniform and the binomial distribution functions;<a class="headerlink" href="#f-calculate-and-interpret-probabilities-given-the-discrete-uniform-and-the-binomial-distribution-functions" title="Permanent link">&para;</a></h5>
+<h5 id="g-construct-a-binomial-tree-to-describe-stock-price-movement-h-define-the-continuous-uniform-distribution-and-calculate-and-interpret-probabilities-given-a-continuous-uniform-distribution-i-explain-the-key-properties-of-the-normal-distribution">g construct a binomial tree to describe stock price movement; h define the continuous uniform distribution and calculate and interpret probabilities, given a continuous uniform distribution; i explain the key properties of the normal distribution;<a class="headerlink" href="#g-construct-a-binomial-tree-to-describe-stock-price-movement-h-define-the-continuous-uniform-distribution-and-calculate-and-interpret-probabilities-given-a-continuous-uniform-distribution-i-explain-the-key-properties-of-the-normal-distribution" title="Permanent link">&para;</a></h5>
+<h5 id="j-distinguish-between-a-univariate-and-a-multivariate-distribution-and-explain-the-role-of-correlation-in-the-multivariate-normal-distribution">j distinguish between a univariate and a multivariate distribution and explain the role of correlation in the multivariate normal distribution;<a class="headerlink" href="#j-distinguish-between-a-univariate-and-a-multivariate-distribution-and-explain-the-role-of-correlation-in-the-multivariate-normal-distribution" title="Permanent link">&para;</a></h5>
+<h5 id="k-determine-the-probability-that-a-normally-distributed-random-variable-lies-inside-a-given-interval">k determine the probability that a normally distributed random variable lies inside a given interval;<a class="headerlink" href="#k-determine-the-probability-that-a-normally-distributed-random-variable-lies-inside-a-given-interval" title="Permanent link">&para;</a></h5>
+<h5 id="l-define-the-standard-normal-distribution-explain-how-to-standardize-a-random-variable-and-calculate-and-interpret-probabilities-using-the-standard-normal-distribution">l define the standard normal distribution, explain how to standardize a random variable, and calculate and interpret probabilities using the standard normal distribution;<a class="headerlink" href="#l-define-the-standard-normal-distribution-explain-how-to-standardize-a-random-variable-and-calculate-and-interpret-probabilities-using-the-standard-normal-distribution" title="Permanent link">&para;</a></h5>
+<h5 id="m-define-shortfall-risk-calculate-the-safety-first-ratio-and-select-an-optimal-portfolio-using-roys-safety-first-criterion">m define shortfall risk, calculate the safety-­first ratio, and select an optimal portfolio using Roy's safety-­first criterion;<a class="headerlink" href="#m-define-shortfall-risk-calculate-the-safety-first-ratio-and-select-an-optimal-portfolio-using-roys-safety-first-criterion" title="Permanent link">&para;</a></h5>
+<h5 id="n-explain-the-relationship-between-normal-and-lognormal-distributions-and-why-the-lognormal-distribution-is-used-to-model-asset-prices">n explain the relationship between normal and lognormal distributions and why the lognormal distribution is used to model asset prices;<a class="headerlink" href="#n-explain-the-relationship-between-normal-and-lognormal-distributions-and-why-the-lognormal-distribution-is-used-to-model-asset-prices" title="Permanent link">&para;</a></h5>
+<h5 id="o-distinguish-between-discretely-and-continuously-compounded-rates-of-return-and-calculate-and-interpret-a-continuously-compounded-rate-of-return-given-a-specific-holding-period-return">o distinguish between discretely and continuously compounded rates of return and calculate and interpret a continuously compounded rate of return, given a specific holding period return;<a class="headerlink" href="#o-distinguish-between-discretely-and-continuously-compounded-rates-of-return-and-calculate-and-interpret-a-continuously-compounded-rate-of-return-given-a-specific-holding-period-return" title="Permanent link">&para;</a></h5>
+<h5 id="p-explain-monte-carlo-simulation-and-describe-its-applications-and-limitations-q-compare-monte-carlo-simulation-and-historical-simulation">p explain Monte Carlo simulation and describe its applications and limitations; q compare Monte Carlo simulation and historical simulation.<a class="headerlink" href="#p-explain-monte-carlo-simulation-and-describe-its-applications-and-limitations-q-compare-monte-carlo-simulation-and-historical-simulation" title="Permanent link">&para;</a></h5>
+<h1 id="reading-10-sampling-and-estimation">READING 10. SAMPLING AND ESTIMATION<a class="headerlink" href="#reading-10-sampling-and-estimation" title="Permanent link">&para;</a></h1>
+<p>a define simple random sampling and a sampling distribution;</p>
+<p>b explain sampling error;</p>
+<p>c distinguish between simple random and stratified random sampling;</p>
+<p>d distinguish between time-­series and cross-­sectional data; e explain
+the central limit theorem and its importance; f calculate and interpret
+the standard error of the sample mean; g identify and describe desirable
+properties of an estimator; h distinguish between a point estimate and a
+confidence interval estimate of a population parameter;</p>
+<p>i describe properties of Student's t-distribution and calculate and
+interpret its degrees of freedom;</p>
+<p>j calculate and interpret a confidence interval for a population mean,
+given a normal distribution with 1) a known population variance, 2) an
+unknown population variance, or 3) an unknown population variance and a
+large sample size;</p>
+<p>k describe the issues regarding selection of the appropriate sample
+size, data-mining bias, sample selection bias, survivorship bias,
+look-­ahead bias, and time-period bias.</p>
+<p>READING 11. HYPOTHESIS TESTING</p>
+<p>a define a hypothesis, describe the steps of hypothesis testing, and
+describe and interpret the choice of the null and alternative
+hypotheses;</p>
+<p>b distinguish between one-­tailed and two-­tailed tests of hypotheses; c
+explain a test statistic, Type I and Type II errors, a significance
+level, and how significance levels are used in hypothesis testing;</p>
+<p>d explain a decision rule, the power of a test, and the relation between
+confidence intervals and hypothesis tests;</p>
+<p>e distinguish between a statistical result and an economically
+meaningful result; f explain and interpret the p-value as it relates to
+hypothesis testing; g identify the appropriate test statistic and
+interpret the results for a hypothesis test concerning the population
+mean of both large and small samples when the population is normally or
+approximately normally distributed and the variance is 1) known or 2)
+unknown;</p>
+<p>h identify the appropriate test statistic and interpret the results for
+a hypothesis test concerning the equality of the population means of two
+at least approximately normally distributed populations, based on
+independent random samples with 1) equal or 2) unequal assumed
+variances;</p>
+<p>i identify the appropriate test statistic and interpret the results for
+a hypothesis test concerning the mean difference of two normally
+distributed populations;</p>
+<p>j identify the appropriate test statistic and interpret the results for
+a hypothesis test concerning 1) the variance of a normally distributed
+population, and 2) the equality of the variances of two normally
+distributed populations based on two independent random samples;</p>
+<p>k formulate a test of the hypothesis that the population correlation
+coefficient equals zero and determine whether the hypothesis is rejected
+at a given level of significance;</p>
+<p>l distinguish between parametric and nonparametric tests and describe
+situations in which the use of nonparametric tests may be appropriate.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1343 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="../../Notes/AI%26Derivatives/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>Mock - obsidian-mkdocs template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="obsidian-mkdocs template" class="md-header__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mock
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="obsidian-mkdocs template" class="md-nav__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    obsidian-mkdocs template
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Mock
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mock
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Mock
+      </a>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/AI%26Derivatives/" class="md-nav__link">
+        AI&Derivatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/Book3SS6-8%20Notes%E9%94%99%E9%A2%98/" class="md-nav__link">
+        Book3SS6 8 Notes错题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/Reading47-Fundamentals%20of%20Credit%20Analysis/" class="md-nav__link">
+        Reading47 Fundamentals of Credit Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/SS10R30-Corporate%20Governance%20%26%20ESG/" class="md-nav__link">
+        SS10R30 Corporate Governance & ESG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/SS11-12%20Equity/" class="md-nav__link">
+        SS11 12 Equity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/SS13%20Fixed-Income/" class="md-nav__link">
+        SS13 Fixed Income
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/SS14%20Fixed-Income/" class="md-nav__link">
+        SS14 Fixed Income
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/SS2%20Quant%20Methods/" class="md-nav__link">
+        SS2 Quant Methods
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/SS3%20Quant%20Analysis%20Summary/" class="md-nav__link">
+        SS3 Quant Analysis Summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/SS6%20Financial%20Report%20and%20Analysis/" class="md-nav__link">
+        SS6 Financial Report and Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/SS7%20Financial%20Report%20and%20Analysis/" class="md-nav__link">
+        SS7 Financial Report and Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/SS8%20Financial%20Report%20and%20Analysis/" class="md-nav__link">
+        SS8 Financial Report and Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Notes/SS9%20Financial%20Report%20and%20Analysis/" class="md-nav__link">
+        SS9 Financial Report and Analysis
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Mock</h1>
+
+<p>Mock</p>
+<p>Monday, August 16, 2021</p>
+<p>9:35 PM</p>
+<ol>
+<li>Professionalism: A)knowledge of the law, B)Independence and
+    objectivity, C)Misrepresentation, D)Misconduct; VII(A) Conduct as
+    participants in CFAI requires member and candidates to act in manner
+    that doesn\'t compromise the reputation and integrity.</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>Disclosing grading information with other ones outside the process
+    is violation, but if you read from a social media post and talk
+    about it OKAY.</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>
+<p><strong>Soft dollar</strong> brokerage is practice of using a portion of
+    brokerage commissions to purchase investment research and related
+    services; therefore, duty of loyalty to use such assets for benefit
+    of the client. Paying a higher-than-normal commission rate for the
+    exclusive purpose of generating soft dollar commissions [same
+    service] without commensurate is violation.</p>
+</li>
+<li>
+<p>Participation in <strong>private placements</strong> or <strong>IPO</strong> should be
+    s<strong>trictly limited to special</strong> situation in which there is no
+    potential for even the appearance of conflicts of interest, so the
+    violation is in appearance of impropriety. Another concern is that
+    once the private placement goes public, there is incentive to offer
+    buying for clients.</p>
+</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>As long as the higher levels of service must not disadvantage or
+    negatively affect other clients, and disclosed &amp; available to all
+    clients and prospective clients. So the fair approach should be
+    offering all clients the same chance to participate in higher.</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>GIPS 9 sections: fundamentals of compliance, input data, calculation
+    methodology, composite construction, disclosure, presentation and
+    reporting, real estate (except publicly traded securities,
+    commercial mortgage-backed securities, private debt investments),
+    <strong>private equity (venture capital)</strong>, wrap fee/SMA portfolios.</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>Must assess the suitability of each client and gather info about
+    specific investment goals, constraints, risk tolerance; otherwise
+    investing violates.</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>
+<p>For advisory role, client is service\'s investors or beneficiaries;
+    for <strong>fund manager</strong>, Primary duty of loyalty to operate funds to
+    <strong>mandate</strong> or investment <strong>fund</strong>.</p>
+</li>
+<li>
+<p>Continuous variables can have any value within a certain range, and
+    the number of potential outcomes is infinite cannot be counted.
+    <strong>Bernoulli</strong> random variable: type of <strong>discrete</strong> random variable
+    assume only 1 or 2 values that represent either a success or
+    failure.</p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="Discrete random variables Stock prices Continuous random variables
+Return on a stock Number of stocks that Valuation ratios (ie,
+increased in value in one year
+" src="media/image1.png" />{width="2.9895833333333335in" height="1.5625in"}</p>
+<p><img alt="Factors causing short-run changes in the economy Aggregate demand •
+Household wealth Consumer and business expectations Capacity
+utilization • Global GDP growth Monetary and fiscal policy Exchange
+rate impacts on demand for foreign versus domestic products Short-run
+aggregate supply Nominal wages Input prices Expectation for future
+output prices and inflation • Business taxes and subsidies Exchange
+rate impacts on input price
+" src="media/image2.png" />{width="5.114583333333333in"
+height="1.8541666666666667in"}</p>
+</blockquote>
+<hr />
+<pre><code> ![Financial statement impact to the lessee Governing standard • \'FRS:
+ all leases US GAAP: finance lease • LIS GAAP: operating lease Balance
+ sheet • Asset • Liability • Asset • Liability Income statement
+ Depreciation • Interest Single expense item Cash flow statement
+ Reduction of lease liability: CFE • Interest payments: 0 \'FRS: CFE or
+ CFO 0 US GAAP: CFO • Entire lease payment: CFO
+ ](media/image3.png){width="5.239583333333333in" height="2.3125in"}
+</code></pre>
+<hr />
+<hr />
+<ol>
+<li><img alt="" src="media/image4.png" />{width="9.03125in"
+    height="0.7916666666666666in"}</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>
+<p>Alternative hypothesis is the accepted ones, bc preference is to
+    reject the null.</p>
+</li>
+<li>
+<p><img alt="Nurnber of firms p roduct Barriers to entry Examples competition
+    Many Homogeneous \'vVheat farming Monopolistic comE.tition Many
+    Grocery retailing Oligopoly Homogeneous High Crude Oil production
+    Monopoly One One High Patented drugs
+    " src="media/image5.png" />{width="5.40625in" height="1.40625in"}</p>
+</li>
+<li>
+<p><strong>Frictionally</strong> unemployment: time lag in matching qualified
+    workers with jobs. Addition of <strong>discouraged</strong> workers to the labor
+    force after economic <strong>recovery</strong> will overwhelm job create,
+    resulting in a <strong>stable</strong> but <strong>high</strong> or increasing unemployment
+    rate.</p>
+</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>
+<p><img alt="" src="media/image6.png" />{width="3.9270833333333335in"
+    height="0.28125in"}</p>
+</li>
+<li>
+<p>Warning sign: <strong>declining inventory</strong> turnover ratio over multiple
+    periods, bc purposefully not recognizing obsolescence to avoid
+    write-downs in current period, but rather future.
+    Net-income-to-cash-from operating <strong>above</strong> 1 may be a warning of
+    aggressive accounting of rev.</p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="Common warning signs of accounting manipulation Frequent reporting
+\&quot;\'surprises\&quot; \&quot;Nonrecurring\&quot; items that consistently appear in
+multiple periods Unusual levels of receivables, payables, Inventory
+turnover, operating cash flow, net income, profit margins
+Underestimating warranty expenses that are \&quot;restated\&quot; in subsequent
+periods Useful lives for long-term assets that are different than
+industry average Related-pany transactions Heavy emphasis on pro forma
+(non-GAAP, non-IFRS) earnings
+" src="media/image7.png" />{width="5.177083333333333in"
+height="1.9166666666666667in"}</p>
+</blockquote>
+<ol>
+<li>
+<p>Addition rule for probabilities P(A or B) = P(A) + P(B) - P(A&amp;B)</p>
+</li>
+<li>
+<p><img alt="" src="media/image8.png" />{width="9.135416666666666in"
+    height="0.5729166666666666in"}</p>
+</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li><img alt="" src="media/image9.png" />{width="6.208333333333333in" height="0.3125in"}</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>
+<p>Begin BV + capital expenditure - depreciation exp - Net BV of
+    equipment disposed = ending BV. Noncash gain = cash received - Net
+    BV of disposed.</p>
+</li>
+<li>
+<p>Depreciation methods</p>
+</li>
+<li>
+<p>Dupont analysis of ROE = PM (profit) * asset turnover
+    (efficiency) * financial leverage; also FL=TA/TE=ROA/ROA</p>
+</li>
+<li>
+<p><img alt="" src="media/image10.png" />{width="2.8333333333333335in"
+    height="0.28125in"}</p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="Point estimate ± Reliability factor x Standard error
+" src="media/image11.png" />{width="2.6979166666666665in" height="0.4375in"}</p>
+</blockquote>
+<ol>
+<li><strong>National income includes</strong>: payment to workers, owners, landlords,
+    savers (eg. Wages, rents, interest) as <strong>compensation</strong> for
+    providing G&amp;S, <strong>excludes</strong> government <strong>transfer</strong> payments (eg.
+    Unemployment benefits, welfare payments) cuz redistribution of
+    resources. Transfer payments are received by individuals; therefore
+    included in personal income, disposable PI.</li>
+</ol>
+<blockquote>
+<p><img alt="Income measures comparison National Income Personal Income
+Disposable Income Employee compensation Net income of unincorporated
+businesses Personal interest and rental income Pretax profit
+enterprises Indirect business taxes (less subsidies) Transfer payments
+Less: Income taxes paid
+" src="media/image12.png" />{width="4.635416666666667in" height="2.5in"}</p>
+</blockquote>
+<ol>
+<li>(1+%Δ in one currency)×(1+%Δ in foreign currency) = 1; the currency
+    value percentage <strong>increase</strong> is always <strong>greater</strong> than the
+    percentage <strong>decrease</strong> of the other currency.</li>
+</ol>
+<blockquote>
+<p><img alt="Tool Open market operations Policy interest rate Reserve
+requirements Monetary policy tools Description Trade securities
+(usually government securities) Set interest rate used to signal
+markets Set percentaqe of bank deposits held in reserves Expansionary
+Contractionary Buy securities Sell securities Lower Decrease Raise
+Increase " src="media/image13.png" />{width="5.541666666666667in"
+height="1.21875in"}</p>
+<p>68/79. Deferred Tax Assets (DTA overpays tax) created taxable income
+> accounting income OR taxes payable > tax expense. When purchase on
+credit, expense won\'t recognize till paid, so current taxable income
+> accounting income. DTL reverse, meaning underpays taxes.</p>
+<p><img alt="Taxable profit €155,000 Accounting profit €140,000 Tax rate 20%
+DTAat 20% tax = (155,000 - 140,000) x 0.20 = 3 000 DTAat 25% tax:
+(155,000 - 140,000) x 0.25 3 750 ADTA = 3,750 - 3,000 = 750
+" src="media/image14.png" />{width="3.0208333333333335in"
+height="1.2604166666666667in"}</p>
+</blockquote>
+<ol>
+<li>US GAAP classifies all property as PP&amp;E, while IFRS defines a
+    separate classification of investment property: either <strong>cost</strong>
+    model(BV-accumulated depreciation) or <strong>fair value</strong> model, which
+    any change to fair value reflect in Net Income IS. <strong>Revaluation</strong>
+    model applies only to PP&amp;E, while upward revaluation of initial is
+    recognized as revaluation surplus (gain) in OCI, subsequent upward
+    revaluation is recognized on IS to previous recognized loss, and
+    gain excess is revaluation surplus; download revaluation of initial
+    is loss in IS, subsequent download reduces revaluation surplus
+    first, and then recognized as loss.</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>
+<p>Intangible assets can be obtained externally (capitalize costs) or
+    internally, but R&amp;D needs to expensed or capitalized; IFRS expense
+    research costs but capitalize development costs[proven technical
+    feasibility]; US GAAP typically expense R&amp;D, however capitalize
+    costs for software R&amp;D if technical feasibility proven.</p>
+</li>
+<li>
+<p>Common-sized financial statements, FCFE=NI + NCC - WC - Inv + ΔDebt</p>
+</li>
+<li>
+<p><img alt="" src="media/image15.png" />{width="9.03125in" height="0.53125in"}</p>
+</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>Intangible assets obtained from stand-alone purchase and acquisition
+    are capitalized in BS.</li>
+</ol>
+<blockquote>
+<p><img alt="Acquisition method Purchased on a stand-alone basis Developed
+internally through research and development Acquired through a
+business combination (egl merqer) Treatment of costs • Fair value of
+assets capitalized on balance sheet Research costs expensed
+immediately on income statement • Development costs capitalized on
+balance sheet f product is developed for internal use (LIS GAAP) or
+has demonstrated technical feasibility (\'FRS) • Fair value of assets
+capitalized on balance sheet Additional goodwill created on balance
+sheet " src="media/image16.png" />{width="6.6875in"
+height="1.4895833333333333in"}</p>
+</blockquote>
+<ol>
+<li>
+<p><img alt="" src="media/image17.png" />{width="9.03125in"
+    height="0.5729166666666666in"}</p>
+</li>
+<li>
+<p>Comparative advantages: calculate the opportunity costs of producing
+    a good in terms of the forgone production of another good.</p>
+</li>
+<li>
+<p>Early expansion phase:</p>
+<ul>
+<li>
+<p>Business begin to replenish inventories</p>
+</li>
+<li>
+<p>Consumers start spending more, particularly on housing and
+    durable goods, as income stabilize</p>
+</li>
+<li>
+<p>GDP moves from negative to modestly positive</p>
+</li>
+<li>
+<p>Central banks generally keep low interest rate to support
+    expanding</p>
+</li>
+<li>
+<p>Unemployment levels decline but remain high, slow layoffs but
+    employers are reluctant to new hire without evidence of
+    sustained economic growth.</p>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><img alt="Business cycle phases and characteristics GDP Expansion Peak
+Contraction Trough Early phase Stabilization to GDP growth rates
+modest growth Moderate to Inflation rates falling Late phase
+Accelerating growth Modest increases Decelerating growth Accelerating
+Tlme Negative growth Moderate to falling
+" src="media/image18.png" />{width="4.770833333333333in" height="3.3125in"}</p>
+</blockquote>
+<ol>
+<li>
+<p><strong>Audit committee\'s</strong> Responsibilities : oversee audit and control
+    system, monitor financial report process and ensure financial
+    accuracy, oversee application of accounting policies, ensure
+    integrity of financial statements, supervise internal audit
+    function, <strong>recommend external auditor</strong>, present annual audit
+    report. Governance committee: responsible for maintaining compliance
+    with laws and regulations.</p>
+</li>
+<li>
+<p>Marginal cost of capital (<strong>MCC</strong>) of making optimal capital
+    budgeting: conventionally equivalent =WACC, assuming 1.project is of
+    average risk, 2.capital structure will not change. But here if it\'s
+    the riskiest by far and will fully be funded with equity, so cost of
+    equity.</p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="Replacement Expansion New products and services Regulatory, safety,
+and environmental Rationale Worn, broken, or inefficient assets Add
+capacity for existing products R&amp;D and investment in products not yet
+offered by the company Driven by external party (eg, government,
+insurance company) Decision considerations Most accurate cash flow
+projections; greatest certainty of decisions Greater uncertainties
+over cost and revenues compared to replacement projects Greater
+uncertainties than expansion projects, most complex investment
+decisions Necessary to stay in business, not directly profit--driven
+like other categories " src="media/image19.png" />{width="7.041666666666667in"
+height="2.0416666666666665in"}</p>
+</blockquote>
+<ol>
+<li>ESG implementation screening approaches - negative: exclude
+    companies, positive: select with favorable ESG attributes,
+    best-in-class: use ESG scoring system to rank companies, ESG
+    integration: combine qualitative ESG factors with data, thematic
+    investing: focus on specific ESG theme or attribute, impact
+    investing: seek to achieve targeted ESG goals along with measurable
+    financial results</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li><strong>Elliott</strong> Wave Theory: framework forecasting stock price movement,
+    comprising a series of upward movements called <strong>impulse</strong> waves and
+    downward movements called <strong>corrective</strong> waves. Wave retracements,
+    which mark a reversal in a price trend, follows <strong>Fibonacci
+    ratios</strong>, not #.</li>
+</ol>
+<blockquote>
+<p><strong>13/22. Pure</strong>-<strong>play</strong> method: select comparable public company,
+calculate asset beta by <strong>unlevering</strong> equity beta to remove financial
+risk, calculate private\'s equity beta by <strong>relevering</strong> the asset
+beta with private\'s D/E ratio.</p>
+</blockquote>
+<ol>
+<li>NPV IRR for raising capital CF: <strong>flotation</strong> costs are underwriting
+    and legal fees up front to investment banks for raising new capital,
+    should include as part of <strong>initial cash outlays</strong> (\@T0).</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>Distributed ledger technology(DLT): decentralized record keeping
+    using an electronic ledger of transactions shared among multiple
+    users in a network. cryptocurrencies, tokenization of physical
+    assets, post-trade clearing and settlement, compliance(allow
+    new-real-time access to transaction and position data in streamlines
+    process).</li>
+</ol>
+<blockquote>
+<p><img alt="Capital market line 0 Risk-free rate Total risk (standard deviation)
+% Security market line Q) Risk-free rate Systematic risk (beta)
+" src="media/image20.png" />{width="4.708333333333333in"
+height="2.3958333333333335in"}</p>
+<p><img alt="Measure of risk Application Definition Slope SML Uses systematic
+risk (non-diversifiable risk) Tool used to determine the appropriate
+expected (benchmark) returns for securities Graph of the capital asset
+pricing model Market risk premium CML Uses standard deviation (total
+risk) Tool used to determine the appropriate asset allocation
+(percentages allocated to the risk-free asset and to the market
+portfolio) for the investor Graph of the efficient frontier Market
+portfolio Sharpe ratio
+" src="media/image21.png" />{width="5.385416666666667in"
+height="3.1145833333333335in"}</p>
+</blockquote>
+<hr />
+<p>\\\`                                                  </p>
+<hr />
+<hr />
+<hr />
+<pre><code>                                  ![Methods of estimating cost of equity
+                                  capital (Re) Capital asset pricing model
+                                  (CAPM) Dividend discount model (DDM)
+                                  Bond yield plus risk premium R,
+                                  Risk-free rate --- Beta --- Expected Of
+                                  market R, = Before-tax cost of debt +
+                                  Equity risk premium DF Dividend expected
+                                  next period PO = Current Stock price g
+                                  Dividend growth rate
+                                  ](media/image22.png){width="5.59375in"
+                                  height="2.375in"}
+</code></pre>
+<hr />
+<hr />
+<blockquote>
+<p><img alt="Market Credit Liquidity Financial risks Source Market rate movements
+Failure to pay/deliver as agreed (eg, counterpany risk, default risk)
+Having to significantly discount price to sell assets Example Central
+bank raises interest rates Corporation defaults on bond payment
+Company needs to raise cash quickly
+" src="media/image23.png" />{width="5.15625in" height="1.6875in"}</p>
+<p><img alt="Settlement Legal Compliance (eg, regulatory, accounting, tax) Model
+(includes tail risk) Operational External Solvency Nonfinancial risks
+Source Uncertainty from transaction flow Time zone differences
+Potential for lawsuits • Failure to uphold contract terms
+Noncompliance with regulations • Changes in accounting standards use
+of incorrect model use of correct model incorrectly Employee errors or
+fraud • Insufficient policies Lack of control over events • Difficulty
+in predicting events Depletion of cash • Inabilitv to fulfill
+obliaations Example Bankruptcy prior to shipping goods Arbitration to
+resolve a commercial dispute Restatement of earnings Understated risk
+from incorrectly assuming normal distribution Rogue trader activity
+Hurricane damage Bankruptcy or liquidation
+" src="media/image24.png" />{width="4.71875in" height="3.96875in"}</p>
+</blockquote>
+<ol>
+<li><img alt="" src="media/image25.png" />{width="9.135416666666666in"
+    height="0.3854166666666667in"}</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li><strong>Buying</strong> securities <strong>on margin</strong> means investor is borrowing part
+    of the purchase price from broker, related to <strong>margin call</strong>; this
+    cannot work with open-end mutual fund, cuz trade only once per day
+    after market close, shares cannot be sold during the trading day if
+    they lose value and require liquidation to meet a margin call.</li>
+</ol>
+<blockquote>
+<p><img alt="Characteristics Shares Purchases and redemptions Pricing Trades at
+NAV Eligible for short sale Can be purchased on margin Exchange-traded
+fund (ETF) Continuously issued and redeemed Exchange traded
+Continuously Usually close to NAV Yes Yes Closed-end fund Fixed
+quantity of shares issued Exchange traded Continuously Usually at a
+discount Yes Yes Open-end mutual fund Continuously issued and redeemed
+Fund sponsor End of day Yes
+" src="media/image26.png" />{width="7.864583333333333in"
+height="2.4479166666666665in"}</p>
+</blockquote>
+<ol>
+<li>Spot curve: YTM on zero-coupon government bonds (assume free of
+    default risk); Par curve: YTM if bonds are priced at par; Forward
+    curve: YTM=implied forward rates that link short-term, zero-coupon
+    bond yields to longer-term, zero-coupon yields.</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>Leveraged buyout(<strong>LBO</strong>): depressed/<strong>undervalued stock</strong> price,
+    agreeable managed and shareholders, <strong>inefficient operations</strong>,
+    robust and predictable cash flow, low leverage, unencumbered
+    physical assets -to service debt financing, improve performance and
+    value.</li>
+</ol>
+<p>+---+----------------------------------------------------------------------+
+| 3 | <img alt="itrage-free Replication Risk-neutral Derivative pricing concepts   |
+| 3 | Traders take advantage of any mispricing of derivatives • Riskless   |
+| . | strategies are created from offsetting positions in derivatives and  |
+|   | underlying assets Strategies are pursued until risk-free profits are |
+|   | eliminated (ie, no-arbitrage pricing) • Derivatives can be created   |
+|   | synthetically from underlying and risk-free assets • Equivalent      |
+|   | positions must have the same expected returns • Derivative price     |
+|   | reflects the value of the replicating strategy • Riskless positions  |
+|   | are created from long/short derivatives and replication strategies • |
+|   | Riskless positions eam a risk-free rate of return; cash flows are    |
+|   | discounted at the risk-free rate                                     |
+|   | " src="media/image27.png" />{width="5.645833333333333in"                     |
+|   | height="3.6354166666666665in"}                                       |
++===+======================================================================+
++---+----------------------------------------------------------------------+</p>
+<ol>
+<li>
+<p>Investors replicate assets using <strong>derivatives</strong> and risk-free
+    assets, and create riskless positions using derivatives and
+    underlying assets; thus derivative valuation is based on
+    arbitrage-free pricing and risk neutrality, all bc <strong>replication</strong>.</p>
+</li>
+<li>
+<p>Under <strong>semi-strong</strong> form of Efficient Market Hypothesis(EMH),
+    net-of-fees returns from passive management will outperform active
+    portfolio management (more frequent trading to exploit perceived
+    inefficiencies, such as earnings surprise, so incurring high
+    transaction costs and information acquisition cost). Neither
+    technical (historical price) nor fundamental analysis can generate
+    abnormal returns, unless insider info.</p>
+</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>Three sources of return for <strong>commodity futures</strong> contracts: <strong>roll
+    yield</strong>(return of futures price converge with spot price as contract
+    approaches expiration; forward curve upward sloping[futures&gt;spot]
+    is <strong>contango</strong>, roll yield is negative for trader with long
+    futures; downward sloping[futures\&lt;spot] is <strong>backwardation</strong>),
+    collateral yield, change in spot price.</li>
+</ol>
+<blockquote>
+<p><img alt="Roll yield Positive roll ard-s\000g curve Negative roll OD/hg curve
+90 00 Ba ckwardation ---e--- Contango
+" src="media/image28.png" />{width="4.90625in" height="3.8229166666666665in"}</p>
+</blockquote>
+<ol>
+<li>Put-call-forward parity: protective put portfolio creates by
+    replacing underlying asset with an equivalent <strong>synthetic asset</strong>
+    (consisting a long forward contract, a risk-free zero-coupon bond
+    with face value=asset\'s forward price; value of synthetic asset
+    \@T0 is 0-coupon bond\'s PV).</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>
+<p><strong>Synthetic</strong> short forward rate agreement(<strong>FRA</strong>: forward contract
+    on interest rate): buying longer maturity deposits to receive
+    interest rate &amp; selling shorter maturity deposits to pay interest
+    rate.</p>
+</li>
+<li>
+<p>Forward price = future value of spot price - future value of
+    benefits(eg. Dividends) + future value of any costs</p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="Forward prices and carrying costs Future value Future value of of
+spot price carrying costs = forward price today T = time to expiration
+So --- spot price today r --- risk-free interest rate y = benefits Of
+holding underlying asset 9 --- cost Of holding underlying asset
+" src="media/image29.png" />{width="2.4791666666666665in" height="1.28125in"}</p>
+</blockquote>
+<p>+------------+------------------------------+--------------------------+
+| Fee        | <strong>Private equity</strong>           | Hedge funds              |
+| structure  |                              |                          |
++============+==============================+==========================+
+| Management | IRR of portfolio, accounts   | Based on assets under    |
+| fee        | for all contributions and    | management(<strong>AUM</strong>),     |
+|            | withdraws                    | regardless of            |
+|            |                              | profitability; if fees   |
+|            | Switch to %of assets under   | independently calculate, |
+|            | management(AUM) after        | on gross basis           |
+|            | investing all committed      |                          |
+|            | capital                      | Committed capital N/A    |
++------------+------------------------------+--------------------------+
+| Inventive  | Based on %of profits         | Always based on %of      |
+| fee        | realized on sale of fund     | profits (realized or     |
+|            | holdings                     | not)\                    |
+|            |                              | fund has discretion on   |
+|            | Profits are not distributed  | distributing realized    |
+|            | (incentive not earned) until | profits\                 |
+|            | holdings are sold            | \                        |
+|            |                              | ***hedge fund\'s fees |
+|            | -   General partner(fund     | calculate independently: |
+|            |     &gt; manager) eligible for  | gross basis, fund        |
+|            |     &gt; incentive once limited | doesn't collect an       |
+|            |     &gt; partners(investors)    | incentive fee on assets  |
+|            |     &gt; receive distributions  | that have already been   |
+|            |     &gt; = initial investment.  | subject to that fee:     |
+|            |                              | high-water mark(HWM):    |
+|            | -   Clawback provision       | fund\'s previous peak    |
+|            |     &gt; requires GP to repay   | value of AUM at which    |
+|            |     &gt; portion of incentive   | incentive fees have been |
+|            |     &gt; fee to forfeit future  | paid.\                   |
+|            |     &gt; incentives             | <strong>hurdle rate</strong>: min     |
+|            |                              | performance a fund       |
+|            | -   Committed capital is     | <strong>must achieve</strong> before  |
+|            |     &gt; what LP agrees to      | earning performance fee  |
+|            |     &gt; provide PE fund, full  |                          |
+|            |     &gt; draw down period is    |                          |
+|            |     &gt; usually 3-5yrs, so NO. |                          |
++------------+------------------------------+--------------------------+</p>
+<blockquote>
+<p><img alt="Categories of equity indexes Most securities of an entire equity
+Broad market market • Blends indexes from different countries
+Multimarket Proxy for regional or global investing • Based on same
+sector (eg, finance, health care) • Can be different sizes (eg; large
+cap, small cap) and different styles (ie; value vs. growth) • Can be
+national, regional; or global • Can be different sectors • Based on
+same Size (eg, large cap) or Style style (ie, value vs. grovhh) • Can
+be national, regional; or global Russell 3000, Wilshire 5000 (both
+cover LIS equities) DJIA and FTSE 100 European energy index Asian
+large-cap index " src="media/image30.png" />{width="5.791666666666667in"
+height="3.7395833333333335in"}</p>
+<p><img alt="Dividend payment timeline aration date (April 15) Company declares
+dividend EX-dividend date (June 14) Stock trades for first time
+without rights to the dividend: stock price falls by the dividend
+amount Record date Trade settles (June 15) after record date Company
+determines legal ownership and is entitled to receive the dividend
+payment date (June 30) Dividend paid settlement period (T 2)
+" src="media/image31.png" />{width="6.21875in" height="1.9583333333333333in"}</p>
+<p><img alt="Hedge fund investor redemption restrictions Lockup period Redemption
+notice period Minimum time an investor is committed to the fund before
+withdrawals are allowed • Usually less than 2 years Requires investor
+to notify the fund of planned redemption • Usually 30---90 days
+" src="media/image32.png" />{width="5.010416666666667in"
+height="1.6979166666666667in"}</p>
+</blockquote>
+<ul>
+<li>Commodity index use futures or derivatives to gain exposure to
+    underlying commodities in each index, <strong>index\'s return</strong> measured
+    by a change in <strong>futures</strong> price diff from <strong>commodity\'s</strong> return
+    measure by a change in <strong>spot</strong> price.</li>
+</ul>
+<blockquote>
+<p><img alt="Internal External Enhancement Subordination Overcollateralization
+Reserve accounts Surety bonds Letters of credit Cash collateral
+accounts Use Senior tranches have priority over junior tranches Issuer
+pledges assets worth more than the amount borrowed Excess cash
+received from financed asset deposited in a separate account Payment
+guarantees issued by insurance companies Guarantees from financial
+institutions other than insurance companies Cash deposited by
+guarantor that issuer can borrow
+" src="media/image33.png" />{width="7.09375in" height="2.2291666666666665in"}</p>
+</blockquote>
+<ol>
+<li>Internal credit enhancement: subordination (time tranching to
+    mitigate prepayment risk, credit tranching - waterfall structure of
+    senior have priority), overcollateralization (pledge assets to
+    borrowed), reserve account.</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li><strong>Forward price</strong> and <strong>value</strong> of existing forward contracts will
+    increase if an increase in storage costs on a physical commodity.
+    Forward price diff from spot price by net cost of holding underlying
+    asset until expiration.</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>Single individual managing all investment strategies in the firm may
+    rise serous concerns regarding <strong>key person risk</strong>, dedication of
+    appropriate resources to each product and overall workload.</li>
+</ol>
+<blockquote>
+<p><img alt="Alternative investment due diligence checklist Organization
+Portfolio management Operations Risk policies Legal risks Terms of
+investment • Team experience, key person risk, and reputation
+Reputation of third party service providers (eg, auditors, prime
+broker) • Recent and long-term track record Strategy, investment
+process; and idea generation • Internal controls, audited financial
+statements, reporting frequency Valuation methodology and controls
+Chief risk officer\'s independence from portfolio decision making •
+Fund/position limits, leverage; hedging policies • Fund structure and
+legal registrations Existing or prior litigation against fund or
+principals • Fees, lockouts, redemption notice period • Carried
+interest, distribution policy " src="media/image34.png" />{width="4.1875in"
+height="3.5625in"}</p>
+</blockquote>
+<ol>
+<li>
+<p>Limitations of grouping companies by <strong>business cycle sensitivity
+    classification</strong>: phase of business cycle occur at diff times in
+    diff countries, so economic performance; industry classification
+    labels are discrete (cyclical or noncyclical), sensitivity of
+    relative description along a continuum. Although certain companies
+    grow revenue during all phases of the business cycle, it\'s not a
+    limitation of the schedule since it doesn\'t affect the sensitivity
+    of a company\'s revenue and profits to the cycle; eg. Both cyclical
+    and noncyclical companies can considered growth companies.</p>
+</li>
+<li>
+<p>Benefits of derivative (futures) market: 1.market efficiency:
+    requires less capital, low transaction costs, selling or short
+    easier, so capital flows faster into the markets; 2. risk transfer:
+    improves risk allocation and management; 3. information discovery:
+    price adjust rapidly, price discovery informs the spot markets to
+    avoid uncertainty.</p>
+</li>
+</ol>
+<pre><code>&lt;!-- --&gt;
+</code></pre>
+<ol>
+<li>Price multiple is justified forward P/E, price in numerator is
+    typically based on <strong>present value</strong> calculation (discounted CF,
+    discounted dividends) and denominator based on a near-term estimate
+    of fundamental variable. Trailing P/E use current stock price /
+    earnings of previous 12mo fundamental; cross-sectional comparison of
+    companies\' P/E relies on law of one price, that stock of similar
+    companies should be similarly priced/valued using current market
+    price relative to respective current fundamentals.</li>
+</ol>
+<blockquote>
+<p><img alt="American depository receipt (ADR) overview Raise new US capital SEC
+registration Trading venues Listing fees Size/earnings requirements
+Rule 144A Yes, but only QIB private placement None Unlisted Low None
+Level I Yes; basic Over-the- counter None Level Il No Yes, basic NYSE,
+NASDAQ, AMEX High Yes Level Ill Yes, public offering Yes, more robust
+filing required NYSE, NASDAQ, AMEX High Yes
+" src="media/image35.png" />{width="7.125in" height="2.65625in"}</p>
+</blockquote>
+<ol>
+<li>
+<p>Established alternative managers during due diligence with a
+    performance fee structure should align interests between investor
+    and manager, risks include closing a fund after suffering a loss and
+    raising more capital than investment strategy can support; usually
+    the performance fee structure aligns interests between investors and
+    managers.</p>
+</li>
+<li>
+<p>Swaps-price: initial value of 0 in contract by set fixed rate so PV
+    of payments from counterparty are equal; -value determined after
+    initiation by diff between PV of fixed and floating payments,
+    affected by changes in market conditions and by fluctuating values
+    of underlying.</p>
+</li>
+<li>
+<p>Reporting net asset value(NAV): average quote (bid+ask)/2 to value
+    publicly traded securities. But inappropriate to take \"haircut\"
+    discount on publicly traded securities due to underlying liquidity
+    issues, trading NAV okay.</p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="Market price approaches Estimated values required Liquidity discount
+Last trade • Bid (long)/ask (short) • Average quote: (Bid + Ask) / 2
+Median quote Used for the reporting NAVs Nontraded or illiquid
+Model-based (eg; statistical, proxy) Valuation procedures and models
+should be independently verified (eg; by an auditor) If market price
+is available, discounts are inconsistent with most generally accepted
+accounting standards • Trading NAVs incorporate liquidity discounts
+that the fund manager deems appropriate to exit position
+" src="media/image36.png" />{width="8.041666666666666in"
+height="2.5208333333333335in"}</p>
+</blockquote>
+<ol>
+<li><img alt="" src="media/image37.png" />{width="9.135416666666666in"
+    height="0.5729166666666666in"}</li>
+</ol>
+<blockquote>
+<p><img alt="Enterprise value (EV) multiples Equity value multiples • El/ /
+EBITDA EV / Revenue EV / Operating Income EV / FCFF (free cash flow to
+the firm) P/E (price-to-earnings) • PEG (price/earnings-to-growth) •
+P/B (price-to-book) " src="media/image38.png" />{width="4.958333333333333in"
+height="1.75in"}</p>
+<p><img alt="Common risk/return measures for altemative investments Risk measure
+Sharpe ratio Sortino ratio Safety-first ratio Value at risk (VaR)
+Characteristics uses standard deviation as a risk measure • Not useful
+if: o Returns are not normally distributed o Asset values can only be
+estimated Measures only downside risk • uses only downside standard
+deviation Also known as shortfall risk Measures only downside risk
+Measures probability of minimum portfolio retum • Focuses on
+probability of large losses (ie; \'tail events\&quot;) • Can be used for
+normal and nonnormal distributions Measures probability of losing a
+specified amount for a period " src="media/image39.png" />{width="5.75in"
+height="3.8854166666666665in"}</p>
+</blockquote>
+<p>Input prices or productivity, affecting production costs and profit
+margins</p>
+<p><img alt="" src="media/image40.png" />{width="0.875in" height="3.34375in"}</p>
+<p><img alt="" src="media/image41.png" />{width="5.4375in" height="0.3333333333333333in"}</p>
+<p><img alt="" src="media/image42.png" />{width="7.385416666666667in"
+height="0.3541666666666667in"}</p>
+<p><img alt="" src="media/image43.png" />{width="0.9895833333333334in"
+height="0.3229166666666667in"}</p>
+<p><img alt="" src="media/image44.png" />{width="0.5625in" height="0.3645833333333333in"}</p>
+<p>Qualified Institutional Buyers</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>
