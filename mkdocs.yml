@@ -2,7 +2,8 @@ site_name: obsidian-mkdocs template
 
 theme:
     name: 'material'
-    palette:
+    palette: 'slate'
+    primary: 'indigo'
 
     # Light mode
     - media: "(prefers-color-scheme: light)"
